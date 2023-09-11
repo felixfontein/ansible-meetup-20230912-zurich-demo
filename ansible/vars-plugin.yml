@@ -1,0 +1,8 @@
+---
+- name: Test vars plugin
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Show host secrets
+      ansible.builtin.debug:
+        msg: "{{ host_name }} has IP {{ host_ip }}"

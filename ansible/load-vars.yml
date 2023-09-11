@@ -1,0 +1,35 @@
+---
+- name: Load variables without interpolation
+  hosts: localhost
+  gather_facts: false
+  pre_tasks:
+    - name: Load encrypted variables without interpolation
+      community.sops.load_vars:
+        file: encrypted-vars.sops.yaml
+      no_log: true
+      tags: always
+  tasks:
+    - name: Show secret 1
+      ansible.builtin.debug:
+        var: secret_1
+    - name: Show secret 2
+      ansible.builtin.debug:
+        var: secret_2
+
+- name: Load variables with interpolation
+  hosts: localhost
+  gather_facts: false
+  pre_tasks:
+    - name: Load encrypted variables with interpolation
+      community.sops.load_vars:
+        file: encrypted-vars.sops.yaml
+        expressions: evaluate-on-load
+      no_log: true
+      tags: always
+  tasks:
+    - name: Show secret 1
+      ansible.builtin.debug:
+        var: secret_1
+    - name: Show secret 2
+      ansible.builtin.debug:
+        var: secret_2

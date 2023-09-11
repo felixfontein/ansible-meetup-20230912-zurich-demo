@@ -1,0 +1,21 @@
+---
+- name: Load encrypted file
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Load encrypted SSH key
+      ansible.builtin.debug:
+        msg: >-
+          {{ lookup("community.sops.sops", "ssh-key.sops") }}
+
+    - name: Load encrypted SSH key and decrypt later
+      ansible.builtin.debug:
+        msg: >-
+          {{ lookup("ansible.builtin.file", "ssh-key.sops")
+             | community.sops.decrypt }}
+
+    - name: Load encrypted SSH key and decrypt later
+      ansible.builtin.debug:
+        msg: >-
+          {{ lookup("ansible.builtin.file", "ssh-key.sops")
+             | community.sops.decrypt(output_type="binary") }}

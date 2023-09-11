@@ -1,0 +1,28 @@
+---
+- name: Create or update encrypted private key
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Create or update encrypted private key
+      block:
+        - name: Create or update private key in memory
+          community.crypto.openssl_privatekey_pipe:
+            content: >-
+              {{ lookup('community.sops.sops',
+                        'private_key.pem.sops',
+                        empty_on_not_exist=true) | default(omit, true) }}
+            type: RSA
+            size: 2048
+          no_log: true
+          register: private_key_temp
+
+        - name: Store private key (if updated)
+          community.sops.sops_encrypt:
+            path: private_key.pem.sops
+            content_text: "{{ private_key_temp.privatekey }}"
+          when: private_key_temp.changed
+
+      always:
+        - name: Forget private key data
+          ansible.builtin.set_fact:
+            private_key_temp: ''

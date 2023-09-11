@@ -1,0 +1,41 @@
+key: ENC[AES256_GCM,data:yUrcdwk=,iv:6beR95Xh8mVMIrW4xsVasET4Fp5h+3mnrRXRhcZYe7Q=,tag:bnOml0kbDk9iP3B1eqkGfQ==,type:str]
+password: ENC[AES256_GCM,data:Qfzi/9BlZTvtt0XO,iv:N0luDxiiHRmVqDHEtgDTarBRXtAFu5R1FaYtQjuzWv8=,tag:XHcNuZATWywYjQRdzsFPtw==,type:str]
+#ENC[AES256_GCM,data:yo32MY5z7kuq3MbINv8rjRzseGp71wPER2/F,iv:9HI0t0NUwMjq2Szk2e6wGBHbXbVKVK9ejaHVt/QrmUw=,tag:1yoyPWsxz6G74RS2FHyrRw==,type:comment]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2023-09-11T20:27:14Z"
+    mac: ENC[AES256_GCM,data:qD/sLoN9s0FiLMgJlSmgJghtCRkryoueRRgs98reLYBxRwWQBvIOTwcDWM8YcyqmN15UWMePF82ES12uZks5/WXhzzC5rJLj5M8akLBAi+HE7j+unHRedtLXQwpKYx83FNJlUYGhLh2NiFjlGdNZbS5bswnNPTLpTpOl0QpG/GM=,iv:igahDG4Xo1yMfgPFXdJSLgNndmoFj+UEF7qIUnulCIU=,tag:ZTP86qc+dJWWdb0oUHrHyQ==,type:str]
+    pgp:
+        - created_at: "2023-09-11T20:26:27Z"
+          enc: |-
+            -----BEGIN PGP MESSAGE-----
+
+            wcBMAyUpShfNkFB/AQgAiIAcJ/kNfoxW75Vs/5UfVGXDFibruvr/BlbM9gbmCE+S
+            BRH2zfAENqXlU2h97x9HRiqxkdvan+aenJD6h5gaDcRpv/B6v2LHJfsxYq9w22aE
+            ku8di9F7Zl4jaCNgiILDjpupZ15QolhU+3/kv3S5NKQ8h8xcqHPEtfEe564yKS4P
+            8sxNhOcjK3T9m3Kph16BxqI8OMvhfLta66cPo4z9hzEUjEwJn/N3ccdc4KWGDCff
+            52ES/k4tVI4YfH97KJZG8w8fr2NCCUtYUp11RRJw2akU9yQvnJgIOzGQFybVBKyC
+            plCoMlWfB/na7P0F8k+wdBTYpYqXlubNaSb+4M0249JRARSZojR1KtjawM5g9EwZ
+            TFje27jWfDahXzOxk2PavdgMwHlVawOQDduwhaAOm03nOJZtgk5e09SZ0er+aei7
+            mmK8VWUV6F1JIBC5gIZXmhqC
+            =jaPO
+            -----END PGP MESSAGE-----
+          fp: FBC7B9E2A4F9289AC0C1D4843D16CEE4A27381B4
+        - created_at: "2023-09-11T20:26:27Z"
+          enc: |-
+            -----BEGIN PGP MESSAGE-----
+
+            wYwDXFUltYFwV4MBA/9/A6xjd6j9IQqDUty4I/M6gmRiGhXBryzblxbDVlM+nyHf
+            HYN9Yk9rf3X1YJV0WaJpxBevyy2RefzROOPezbWz4QnUsJgAiZsHPpt8eyxMjmNn
+            LNf5wZ/CIRPd3xz+9bUYAHShi5KLCVStP6TMWgRW7AWzkv+Hvx3jjydXlat3VtJR
+            AYPLNWnXx49lrSUEk6QoQgDBkylWc7yls5ZPLNpmevzOAJfBqsncFG5ufmS77bap
+            SR1vBCDhrVEyWWeAQVv74kDAYNcAKVc8ZQsm7qaLlhy7
+            =Lly6
+            -----END PGP MESSAGE-----
+          fp: D7229043384BCC60326C6FB9D8720D957C3D3074
+    unencrypted_suffix: _unencrypted
+    version: 3.8.0-rc.1
